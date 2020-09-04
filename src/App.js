@@ -1,10 +1,16 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from "react";
+import Blocks from "./Blocks";
 
 function App() {
+  const [income, setIncome] = useState([0]);
+  const [expense, setExpense] = useState([0])
+
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
+    <div className="text-center">
+      <header>
+        <h1 className="text-5xl">Expense Tracker</h1>
+      </header>
+      <Blocks income={income} expense={expense} />
     </div>
   );
 }
