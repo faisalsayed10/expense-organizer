@@ -1,12 +1,11 @@
 import React from "react";
 
-function Incomes({ number, title, income, category }) {
+function Incomes({ title, income, category }) {
   return (
-    <li className='flex flex-row'>
-      <h1 className='ml-5 text-3xl'>{number}.</h1>
-      <h1 className='ml-5 text-3xl'>{title}</h1>
-      <h1 className='ml-5 text-3xl font-bold'>${income}</h1>
-      <h1 className='ml-5 text-3xl'>{category}</h1>
+    <li className="flex flex-row border-l-4 shadow-md rounded-r-md border-green-500 my-5">
+      <h1 className="ml-5 text-xl py-1">{title}</h1>
+      <h1 className="ml-5 text-xl py-1 font-bold">${income}</h1>
+      <h1 className="ml-5 text-xl py-1">{category}</h1>
     </li>
   );
 }

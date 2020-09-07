@@ -1,14 +1,13 @@
-import React from 'react'
+import React from "react";
 
-function Expenses({number, title, income, category }) {
-    return (
-        <li className='flex flex-row'>
-        <h1 className='ml-5 text-3xl'>{number}.</h1>
-        <h1 className='ml-5 text-3xl'>{title}</h1>
-        <h1 className='ml-5 text-3xl font-bold'>${income}</h1>
-        <h1 className='ml-5 text-3xl'>{category}</h1>
-      </li>
-    )
+function Expenses({ title, income, category }) {
+  return (
+    <li className="flex flex-row border-l-4 rounded-r-md shadow-md border-red-500 my-5">
+      <h1 className="ml-5 text-xl py-1">{title}</h1>
+      <h1 className="ml-5 text-xl py-1 font-bold">${income}</h1>
+      <h1 className="ml-5 text-xl py-1">{category}</h1>
+    </li>
+  );
 }
 
-export default Expenses
+export default Expenses;
