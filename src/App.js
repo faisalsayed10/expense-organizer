@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Blocks from "./Blocks";
-import AddInputs from "./AddInputs";
+import Blocks from "./Parent-Components/Blocks";
+import AddInputs from "./Parent-Components/AddInputs";
+import ListGroup from "./Parent-Components/ListGroup";
 
 function App() {
   const [incomes, setIncomes] = useState([]);
@@ -24,6 +25,7 @@ function App() {
         error={error}
         setError={setError}
       />
+      <ListGroup incomes={incomes} expenses={expenses}/>
     </div>
   );
 }
