@@ -36,18 +36,18 @@ function Blocks({ incomes, expenses }) {
   }, [incomes, expenses]);
 
   return (
-    <div className="flex justify-evenly">
+    <div className="flex justify-evenly text-center">
       <div className={blockClass}>
-        <h2 className="text-3xl w-56">Income</h2>
-        <h1 className="text-5xl w-56">${totalIncome}</h1>
+        <p className="text-xl tracking-widest uppercase text-gray-600 w-56">Income</p>
+        <h1 className="text-5xl w-56 font-semibold">${totalIncome}</h1>
       </div>
       <div className={blockClass}>
-        <h2 className="text-3xl w-56">Expenses</h2>
-        <h1 className="text-5xl w-56">${totalExpense}</h1>
+        <p className="text-xl tracking-widest uppercase text-gray-600 w-56">Expenses</p>
+        <h1 className="text-5xl w-56 font-semibold">${totalExpense}</h1>
       </div>
       <div className={blockClass}>
-        <h2 className="text-3xl w-56">Balance</h2>
-        <h1 className="text-5xl w-56">${balance}</h1>
+        <p className="text-xl tracking-widest uppercase text-gray-600 w-56">Balance</p>
+        <h1 className="text-5xl w-56 font-semibold">${balance}</h1>
       </div>
     </div>
   );

@@ -1,11 +1,15 @@
 import React from "react";
 
+const itemClass = 'flex items-baseline justify-between border-l-4 rounded-r-md shadow-md border-red-500 my-5 p-4'
+
 function Expenses({ title, income, category }) {
   return (
-    <li className="flex flex-row border-l-4 rounded-r-md shadow-md border-red-500 my-5">
-      <h1 className="ml-5 text-xl py-1">{title}</h1>
-      <h1 className="ml-5 text-xl py-1 font-bold">${income}</h1>
-      <h1 className="ml-5 text-xl py-1">{category}</h1>
+    <li className={itemClass}>
+      <h1 className="text-2xl font-semibold">${income}</h1>
+      <p className='flex'>
+      <span className="text-sm text-gray-600 px-1">{title}</span>
+      <span className="text-sm text-gray-600 px-1">{category}</span>
+      </p>
     </li>
   );
 }

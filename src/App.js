@@ -42,23 +42,24 @@ function App() {
   }, [expenses, incomes]);
 
   return (
-    <div className="text-center">
-      <header>
-        <h1 className="text-white text-5xl bg-gray-800 p-1 mb-5">
+    <>
+      <header className='p-5 text-white text-5xl text-center bg-gray-800'>
+        <h1 className="">
           Expense Tracker
         </h1>
       </header>
-      <Blocks incomes={incomes} expenses={expenses} />
-      <AddInputs
-        setIncomes={setIncomes}
-        setExpenses={setExpenses}
-        setLimit={setLimit}
-        limit={limit}
-        error={error}
-        setError={setError}
-      />
-      <ListGroup incomes={incomes} expenses={expenses} />
-    </div>
+      <main className=" p-16">
+        <Blocks incomes={incomes} expenses={expenses} />
+        <AddInputs
+          setIncomes={setIncomes}
+          setExpenses={setExpenses}
+          setLimit={setLimit}
+          expenses={expenses}
+          incomes={incomes}
+          setError={setError}
+        />
+      </main>
+    </>
   );
 }
 
