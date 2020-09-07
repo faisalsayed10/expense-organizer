@@ -48,7 +48,7 @@ function App() {
           Expense Tracker
         </h1>
       </header>
-      <main className=" p-16">
+      <main className="md:p-16 p-10">
         <Blocks incomes={incomes} expenses={expenses} />
         <AddInputs
           setIncomes={setIncomes}

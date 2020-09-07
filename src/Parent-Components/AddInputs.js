@@ -5,12 +5,12 @@ import ListGroup from "./ListGroup";
 
 function AddInputs({ setIncomes, setLimit, setExpenses, incomes, expenses }) {
   return (
-    <div className="my-5 flex flex-col">
-      <div className="flex">
-        <div className="w-1/2 flex-1 px-10 py-16">
+    <div className="my-5 flex md:flex-no-wrap flex-wrap flex-col">
+      <div className="flex md:flex-row flex-col">
+        <div className="md:w-1/2 flex-1 md:px-10 py-16">
           <AddIncomeInput setIncomes={setIncomes} setLimit={setLimit} />
         </div>
-        <div className="w-1/2 flex-1 px-10 py-16">
+        <div className="md:w-1/2 flex-1 md:px-10 py-16">
           <AddExpenseInput setExpenses={setExpenses} />
         </div>
       </div>

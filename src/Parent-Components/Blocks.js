@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const blockClass = "rounded-lg shadow-2xl p-4";
+const blockClass = "rounded-lg shadow-2xl p-4 md:my-0 my-4";
 
 let totalExpense = 0;
 let totalIncome = 0;
@@ -34,7 +34,7 @@ function Blocks({ incomes, expenses }) {
   }, [incomes, expenses]);
 
   return (
-    <div className="flex justify-evenly text-center">
+    <div className="flex md:flex-no-wrap flex-wrap justify-evenly text-center">
       <div className={blockClass}>
         <p className="text-md tracking-widest uppercase text-gray-600 w-56">Income</p>
         <h1 className="text-5xl w-56 font-semibold">${totalIncome}</h1>
