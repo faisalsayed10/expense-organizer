@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Blocks from "./Parent-Components/Blocks";
 import AddInputs from "./Parent-Components/AddInputs";
-import ListGroup from "./Parent-Components/ListGroup";
 
 function App() {
   const [incomes, setIncomes] = useState([]);
   const [expenses, setExpenses] = useState([]);
   const [limit, setLimit] = useState("0");
   const [error, setError] = useState("");
-
-  const setLocalStorage = () => {
-    localStorage.setItem("incomes", JSON.stringify(incomes));
-    localStorage.setItem("expenses", JSON.stringify(expenses));
-  };
+  console.log(limit, error)
 
   const getLocalStorageIncomes = () => {
     if (localStorage.getItem("incomes") === null) {
@@ -38,7 +33,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setLocalStorage();
+    localStorage.setItem("incomes", JSON.stringify(incomes));
+    localStorage.setItem("expenses", JSON.stringify(expenses));
   }, [expenses, incomes]);
 
   return (

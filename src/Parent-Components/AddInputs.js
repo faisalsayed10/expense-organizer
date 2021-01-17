@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AddIncomeInput from "../Components/AddIncomeInput";
 import AddExpenseInput from "../Components/AddExpenseInput";
 import ListGroup from "./ListGroup";
